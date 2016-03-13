@@ -18,16 +18,48 @@
 \end{mdframed}
 
 %%%% Topic %%%%
-\subsection*{Thevenin's Equivalence}
+\subsection*{Thevenin Equivalence}
 %%%% Notes %%%%
 \begin{center}\includegraphics{thev}\includegraphics{th_voc}\includegraphics{th_isc}\end{center}
 \begin{itemize}
-\item Open Circuit: Find voltage drop between two nodes in normal circuit ($V_{oc}$). No current is flowing (no voltage drop over resistor).
-\item Short Circuit: Find current between two nodes, skip everything between them ($I_{sc}$)
+\item Open Circuit: Find voltage drop between two nodes in complete  (normal) circuit ($V_{oc}$). No current is flowing (no voltage drop over resistor).
+\item Short Circuit: Find current between two nodes, skip all voltage drops/resistors/subcircuits between them ($I_{sc}$)
 \end{itemize}
 \begin{mdframed}
 \textbf{Thevenin Equations:}\\
 \begin{equation}V_{th} = V_{oc}\end{equation}
 \begin{equation}R_{th} = \frac{V_{th}}{I_{sc}}\end{equation}
 \end{mdframed}
+
+%%%% Topic %%%%
+\subsection*{Norton Equivalence}
+%%%% Notes %%%%
+\begin{center}\includegraphics{norton}\end{center}
+\begin{itemize}
+\item Open Circuit:  Find voltage drop between two nodes in complete (normal) circuit $V_{oc} = I_{no}\cdot R_{no}$
+\item Short Circuit: Find current between two nodes, skip all voltage drops/resistors/subcircuits between them ($I_{sc}$)
+\end{itemize}
+\begin{mdframed}
+\textbf{Norton Equations:}\\
+\begin{equation}I_{no}=I_{sc}=\frac{V_{S}}{R_{ab}}\end{equation}
+\begin{equation}R_{no}=\frac{V_{oc}}{I_{no}} = \frac{R_{ab}R_{bc}}{R_{ab}+R_{bc}}=R_{th}=\frac{V_{th}}{I_{th}}\end{equation}
+\end{mdframed}
+
+%%%% Topic %%%%
+\subsection*{Superposition}
+%%%% Notes %%%%
+\begin{center}\includegraphics{spf}\includegraphics{sp1}\includegraphics{sp2}\end{center}
+\begin{enumerate}[1.]
+    \item For each source ($V_{src}$, or $I_{src}$) $k$:
+    \begin{enumerate}[a.]
+        \item Set all other sources to 0
+        \begin{itemize}
+            \item $V_{src}$ to short circuit (no voltage drop/increase)
+            \item $I_{src}$ to open circuit (no current)
+        \end{itemize}
+        \item Compute $V_{out}$ due to source $k$
+    \end{enumerate}
+    \item Sum up all $V_{out_k}$'s for all $k$ sources
+\end{enumerate}
+
 \end{document}
