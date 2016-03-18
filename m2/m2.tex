@@ -9,12 +9,91 @@
 \maketitle
 
 %%%% Topic %%%%
-\subsection*{Inverting Amplifier}
+\subsection*{Superposition}
 %%%% Notes %%%%
 \begin{itemize}
-    \item Content
+    \item Investigate circuit using one source at a time
+    \item Sum all components algebraically (keep in mind polarity)
+\end{itemize}
+%%%% Topic %%%%
+\subsection*{Passive Sign Convention}
+%%%% Notes %%%%
+\begin{itemize}
+    \item Consuming Power: Current enters ($V^+$); Supply Power: Current enters ($V^-$)
+    \item Supply: Voltage/Current sources, discharging capacitors
+    \item Consume: Resistors, charging capacitors
+\end{itemize}
+%%%% Topic %%%%
+\subsection*{OpAmps}
+%%%% Notes %%%%
+\tincludegraphics{opsum}
+\begin{itemize}
+    \item $V_{out} = A(V^+ - V^-)$
+    \item $V_{s-} \ge V_{out} \ge V_{s-}$
 \end{itemize}
 \begin{mdframed}
-\textbf{Highlight:}\\
+\textbf{Golden Rules:}
+\begin{itemize}
+    \item $I^- = I^+ = 0$
+    \item $V^-=V^+$ (only with Neg FB)
+\end{itemize}
 \end{mdframed}
+%%%% Topic %%%%
+\subsection*{Charge Sharing}
+%%%% Notes %%%%
+\begin{itemize}
+    \item For each phase: compute $Q_{tot}=\sum Q_n$ in terms of CV
+    \item Equate $Q_{tot}$ of all phases: solve
+    \item When getting $\Delta V$ for $Q_n=\frac{C_n}{\Delta V_n}$, subract ($V^+ -  - V^-$)
+\end{itemize}
+%%%% Topic %%%%
+\subsection*{Capacitance}
+%%%% Notes %%%%
+\begin{itemize}
+    \item $Q=CV, C=\varepsilon\frac{A}{d}, E=\frac{CV^2}{2}$
+    \item Parallel: $C_p = \sum C_n$ V is same, but Q may not be
+    \item Series: $C_s = \frac{C_1C_2}{C_1+C_2}, \frac{1}{C_s}=\sum\frac{1}{C_n}$
+    \item Current applied to cap $\Rightarrow Q$ increases and V increases over time
+    \item Dischargin cap $\Rightarrow V$ drops
+    \item $Q$ on cap. after $t$ time = $It$
+\end{itemize}
+%%%% Topic %%%%
+\subsection*{Thevenin/Norton}
+%%%% Notes %%%%
+\begin{itemize}
+    \item Treat output terminals as open circuit ($V_{out}=V_{th}$)
+    \item Treat output terminals as short circuit ($I_{sc}=I_{no}$
+    \item $R_{th} = R_{no} = \frac{V_{th}}{I_{no}}$
+\end{itemize}
+%%%% Topic %%%%
+\subsection*{Dividers}
+%%%% Notes %%%%
+\begin{itemize}
+    \item Voltage: $V_{out} = V_{in}\frac{R_2}{R_1R_2}$
+    \item Current: $I_{x} = I_t \frac{R_t}{R_x+R_t}, I_1=I_{tot}\frac{R_2}{R_1+R_2}$
+\end{itemize}
+%%%% Topic %%%%
+\subsection*{KVL/VCL}
+%%%% Notes %%%%
+\begin{itemize}
+    \item KVL: net potential around any loop = 0: $\sum V = 0$
+    \item KCL: Charge is always conserved: $\sum I = 0$, $I_{in} = I_{out}$
+\end{itemize}
+%%%% Topic %%%%
+\subsection*{Resistors}
+%%%% Notes %%%%
+\begin{itemize}
+    \item Ohm's Law: $V=IR$, Resistivity: $R=\rho\frac{L}{A}$
+    \item Series: $R_{tot} = \sum R_n$: Current equiv. Voltage splits proportionally
+    \item Parallel: $R_{tot} = \frac{R_1R_2}{R_1+R_2}, \frac{1}{R_{tot}} = \sum\frac{1}{R_n}$: Voltage drop equiv. Current split proportionally
+\end{itemize}
+%%%% Topic %%%%
+\subsection*{Null Space}
+%%%% Notes %%%%
+\begin{itemize}
+    \item Full Row reduction
+    \item Set free vars to arbitrary values (r,s,...)
+    \item Solve $x$ in terms of free vars
+    \item $dim(Nul(A)) =$ No. of free vars
+\end{itemize}
 \end{document}
