@@ -1,4 +1,4 @@
-\documentclass{article}\usepackage{amsmath,amssymb,amsthm,tikz,tkz-graph,color,chngpage,soul,hyperref,csquotes,graphicx,floatrow,framed,scrextend,mathrsfs}\newcommand*{\QEDB}{\hfill\ensuremath{\square}}\newtheorem*{prop}{Proposition}\renewcommand{\theenumi}{\alph{enumi}}\usepackage[shortlabels]{enumitem}\usepackage[nobreak=true]{mdframed}\usetikzlibrary{matrix,calc}\MakeOuterQuote{"}\usepackage[margin=0.75in]{geometry} \newtheorem{theorem}{Theorem}\newcommand{\Z}{\mathbb Z}\newcommand{\R}{\mathbb R}\newcommand{\Q}{\mathbb Q}\newcommand{\N}{\mathbb N}\newcommand{\x}[1]{\textrm{ #1 }}\newcommand{\pr}{\textrm{Pr}}
+\documentclass{article}\usepackage{amsmath,amssymb,amsthm,tikz,tkz-graph,color,chngpage,soul,hyperref,csquotes,graphicx,floatrow,framed,scrextend,mathtools,mathrsfs}\newcommand*{\QEDB}{\hfill\ensuremath{\square}}\newtheorem*{prop}{Proposition}\renewcommand{\theenumi}{\alph{enumi}}\usepackage[shortlabels]{enumitem}\usepackage[nobreak=true]{mdframed}\usetikzlibrary{matrix,calc}\MakeOuterQuote{"}\usepackage[margin=0.75in]{geometry} \newtheorem{theorem}{Theorem}\newcommand{\Z}{\mathbb Z}\newcommand{\R}{\mathbb R}\newcommand{\Q}{\mathbb Q}\newcommand{\N}{\mathbb N}\newcommand{\x}[1]{\textrm{#1}}\newcommand{\xs}[1]{\textrm{ #1 }}\newcommand{\pr}{\textrm{Pr}}
 \newcommand{\dincludegraphics}{\includegraphics[width=0.5\textwidth]}
 \newcommand{\tincludegraphics}{\includegraphics[width=0.33\textwidth]}
 \newcommand{\sumlim}[3]{\sum\limits_{#1}^{#2}#3}
@@ -20,6 +20,11 @@
 \newcommand{\eqs}[1]{\begin{mdframed}#1\end{mdframed}}
 \newcommand{\simple}[1]{\easy{gray}{#1}}
 \newcommand{\inprod}[2]{\langle #1, #2\rangle}
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+\newcommand{\items}[1]{\begin{itemize}#1\end{itemize}}
+\newcommand{\bmat}[1]{\begin{bmatrix}#1\end{bmatrix}}
+\newcommand{\ds}{\doublespacing}
 
 \title{EE16A - Lecture \# Notes}
 \author{Name: Felix Su$\quad$SID: 25794773}
@@ -30,10 +35,13 @@
 %%%% Topic %%%%
 \subsection*{Topic}
 %%%% Notes %%%%
-\begin{itemize}
+\simple{
+    \item Summary
+}
+\items{
     \item Content
-\end{itemize}
-\begin{mdframed}
+}
+\eqs{
 \textbf{Highlight:}\\
-\end{mdframed}
+}
 \end{document}
