@@ -81,7 +81,7 @@
     \item \textbf{Problem:} $b \not\in $ span of cols of $A$ because there is error in the signals.
     \items{
         \item $Ax=b$ has no exact soln.
-        \item $b$ is some vector outside the subspace of $x_1A_1+x_2A_2$ (outside of the angle formed by the two vectors of $A$)
+        \item $b$ is some vector outside the subspace of $x_1A_1+x_2A_2$ (outside of the plane formed by the two vectors of $A$)
         \item Error $\varepsilon=b-Ax$
         \item Find $x$ s.t. $\norm{\varepsilon}^2$ is minimized
         \item $Ax=a_1x_1+a_2x_2$, which is a line between the two vectors ($a_1,a_2$).
@@ -114,7 +114,7 @@
         \item $x=\frac{\inprod{\vec{a}}{\vec{b}}}{\inprod{\vec{a}}{\vec{a}}}=\frac{\vec{a}^T\vec{b}}{\vec{a}^Ta}$
     }
     \item Best estimate for $\vec{b}$ in the least square error sense is $\hat{b}=\vec{a}x-\frac{\vec{a}^T\vec{b}}{\vec{a}^Ta}\vec{a}$
-    \item Can derive Cauchy-Schqarz from $\norm{\varepsilon}=\norm{\vec{b}-\hat{b}}^2\ge0$
+    \item Can derive Cauchy-Schwarz from $\norm{\varepsilon}=\norm{\vec{b}-\hat{b}}^2\ge0$
 }
 \eqs{
 \textbf{Cauchy-Schwarz Inequality}
